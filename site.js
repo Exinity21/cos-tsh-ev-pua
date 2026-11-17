@@ -1,0 +1,3 @@
+// Replace these example URLs with your real application form links.
+const APPLICATION_LINKS={treasure:"https://forms.gle/SbponGwFGVHiLytC8",activities:"https://forms.gle/4kbnqb3ncXo2obDf6"};
+document.querySelectorAll("[data-link]").forEach(link=>link.addEventListener("click",e=>{e.preventDefault();const url=APPLICATION_LINKS[link.dataset.link];if(!url||url.includes("example.com")){alert("Add your application form URL in site.js to activate this button.");return;}location.href=url;}));
